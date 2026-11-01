@@ -1,0 +1,17 @@
+db/
+incremental_db/
+output_files/
+simulation/
+greybox_tmp/
+*.rpt
+*.summary
+*.smsg
+*.sof
+*.pof
+*.jdi
+*.pin
+*.qws
+*.bak
+transcript
+vsim.wlf
+work/

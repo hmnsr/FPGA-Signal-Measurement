@@ -1,0 +1,96 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do signal_measurement_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/FPGA\ Projects/Signal\ Measurement {C:/FPGA Projects/Signal Measurement/signal_measurement_top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:47:36 on Oct 31,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/FPGA Projects/Signal Measurement" C:/FPGA Projects/Signal Measurement/signal_measurement_top.v 
+# -- Compiling module signal_measurement_top
+# 
+# Top level modules:
+# 	signal_measurement_top
+# End time: 20:47:36 on Oct 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/FPGA\ Projects/Signal\ Measurement {C:/FPGA Projects/Signal Measurement/hex7seg.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:47:36 on Oct 31,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/FPGA Projects/Signal Measurement" C:/FPGA Projects/Signal Measurement/hex7seg.v 
+# -- Compiling module hex7seg
+# 
+# Top level modules:
+# 	hex7seg
+# End time: 20:47:36 on Oct 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/FPGA\ Projects/Signal\ Measurement {C:/FPGA Projects/Signal Measurement/test_signal_gen.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:47:36 on Oct 31,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/FPGA Projects/Signal Measurement" C:/FPGA Projects/Signal Measurement/test_signal_gen.v 
+# -- Compiling module test_signal_gen
+# 
+# Top level modules:
+# 	test_signal_gen
+# End time: 20:47:36 on Oct 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/FPGA\ Projects/Signal\ Measurement {C:/FPGA Projects/Signal Measurement/signal_measurement_board_top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:47:36 on Oct 31,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/FPGA Projects/Signal Measurement" C:/FPGA Projects/Signal Measurement/signal_measurement_board_top.v 
+# -- Compiling module signal_measurement_board_top
+# 
+# Top level modules:
+# 	signal_measurement_board_top
+# End time: 20:47:36 on Oct 31,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+cd {C:\FPGA Projects\Signal Measurement}
+# reading C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini
+vsim -gui -l msim_transcript work.signal_measurement_tb work.signal_measurement_top work.test_signal_gen
+# vsim -gui -l msim_transcript work.signal_measurement_tb work.signal_measurement_top work.test_signal_gen 
+# Start time: 20:48:41 on Oct 31,2026
+# Loading work.signal_measurement_tb
+# Loading work.signal_measurement_top
+# Loading work.test_signal_gen
+run -all
+# 10 kHz: gate edge count = 10 (Expected 10)
+# PASS
+# 50 kHz: gate edge count = 50 (Expected 50)
+# PASS
+# 100 kHz: gate edge count = 100 (Expected 100)
+# PASS
+# -------------
+# Duty check: period=500 (expected 500), high=250 (expected 250), duty=50% (expected 50%)
+# PASS
+# -------------
+# Duty check: period=500 (expected 500), high=125 (expected 125), duty=25% (expected 25%)
+# PASS
+# -------------
+# Duty check: period=5000 (expected 5000), high=3750 (expected 3750), duty=75% (expected 75%)
+# PASS
+# -------------
+# Loopback sel f=0 d=0: edges=1 (exp 1) period=50000 (exp 50000) high=25000 (exp 25000) duty=50% (exp 50%)
+# PASS
+# -------------
+# Loopback sel f=1 d=1: edges=10 (exp 10) period=5000 (exp 5000) high=1250 (exp 1250) duty=25% (exp 25%)
+# PASS
+# -------------
+# Loopback sel f=2 d=2: edges=100 (exp 100) period=500 (exp 500) high=375 (exp 375) duty=75% (exp 75%)
+# PASS
+# -------------
+# Loopback sel f=3 d=0: edges=1000 (exp 1000) period=50 (exp 50) high=25 (exp 25) duty=50% (exp 50%)
+# PASS
+# PASS: reset clears measurement outputs
+# =============================
+# ALL TESTS PASSED.
+# ** Note: $finish    : signal_measurement_tb.v(203)
+#    Time: 18983231 ns  Iteration: 0  Instance: /signal_measurement_tb
+# 1
+# Break in Module signal_measurement_tb at signal_measurement_tb.v line 203
